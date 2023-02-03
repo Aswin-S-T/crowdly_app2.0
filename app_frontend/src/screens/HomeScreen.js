@@ -7,7 +7,7 @@ import Feeds from "../components/Feeds";
 const Home = () => {
 	return (
 		<View>
-			<Header />
+			<Header name={"Crowdly"} />
 			<Feeds />
 		</View>
 	);

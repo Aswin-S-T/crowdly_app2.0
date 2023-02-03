@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const Header = () => {
+const Header = ({ name }) => {
 	return (
 		<View
 			style={{
@@ -22,7 +22,7 @@ const Header = () => {
 					fontFamily: "sans-serif",
 				}}
 			>
-				Crowdly
+				{name}
 			</Text>
 		</View>
 	);

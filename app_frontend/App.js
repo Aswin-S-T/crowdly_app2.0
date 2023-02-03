@@ -19,7 +19,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
 					<Ionicons
 						name="md-home"
 						size={tabInfo.focused ? 26 : 24}
-						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+						color={tabInfo.focused ? "#07BA8F" : tabInfo.tintColor}
 					/>
 				),
 			},
@@ -32,7 +32,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
 					<Ionicons
 						name="people-outline"
 						size={tabInfo.focused ? 26 : 24}
-						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+						color={tabInfo.focused ? "#07BA8F" : tabInfo.tintColor}
 					/>
 				),
 			},
@@ -45,7 +45,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
 					<Ionicons
 						name="notifications-outline"
 						size={tabInfo.focused ? 26 : 24}
-						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+						color={tabInfo.focused ? "#07BA8F" : tabInfo.tintColor}
 					/>
 				),
 			},
@@ -58,7 +58,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
 					<Ionicons
 						name="md-settings-outline"
 						size={tabInfo.focused ? 26 : 24}
-						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+						color={tabInfo.focused ? "#07BA8F" : tabInfo.tintColor}
 					/>
 				),
 			},
@@ -71,7 +71,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
 					<Ionicons
 						name="person-circle-outline"
 						size={tabInfo.focused ? 26 : 24}
-						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+						color={tabInfo.focused ? "#07BA8F" : tabInfo.tintColor}
 					/>
 				),
 			},

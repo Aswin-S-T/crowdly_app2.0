@@ -1,20 +1,94 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { Ionicons } from "@expo/vector-icons";
+import { createAppContainer } from "react-navigation";
+import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
+
+import HomeScreen from "./src/screens/HomeScreen";
+import UserScreen from "./src/screens/UserScreen";
+import SettingScreen from "./src/screens/SettingScreen";
+import Nofification from "./src/screens/NotificationScreen";
+import Profile from "./src/screens/ProfileScreen";
+
+const TabNavigator = createMaterialBottomTabNavigator(
+	{
+		Home: {
+			screen: HomeScreen,
+			navigationOptions: {
+				tabBarLabel: "Home",
+				tabBarIcon: (tabInfo) => (
+					<Ionicons
+						name="md-home"
+						size={tabInfo.focused ? 26 : 24}
+						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+					/>
+				),
+			},
+		},
+		User: {
+			screen: UserScreen,
+			navigationOptions: {
+				tabBarLabel: "User",
+				tabBarIcon: (tabInfo) => (
+					<Ionicons
+						name="people-outline"
+						size={tabInfo.focused ? 26 : 24}
+						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+					/>
+				),
+			},
+		},
+		Notification: {
+			screen: Nofification,
+			navigationOptions: {
+				tabBarLabel: "Notification",
+				tabBarIcon: (tabInfo) => (
+					<Ionicons
+						name="notifications-outline"
+						size={tabInfo.focused ? 26 : 24}
+						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+					/>
+				),
+			},
+		},
+		Setting: {
+			screen: SettingScreen,
+			navigationOptions: {
+				tabBarLabel: "Setting",
+				tabBarIcon: (tabInfo) => (
+					<Ionicons
+						name="md-settings-outline"
+						size={tabInfo.focused ? 26 : 24}
+						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+					/>
+				),
+			},
+		},
+		Profile: {
+			screen: Profile,
+			navigationOptions: {
+				tabBarLabel: "Profile",
+				tabBarIcon: (tabInfo) => (
+					<Ionicons
+						name="person-circle-outline"
+						size={tabInfo.focused ? 26 : 24}
+						color={tabInfo.focused ? "#0083FF" : tabInfo.tintColor}
+					/>
+				),
+			},
+		},
+	},
+	{
+		initialRouteName: "Home",
+		barStyle: { backgroundColor: "aliceblue" },
+	}
+);
+
+const Navigator = createAppContainer(TabNavigator);
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	return (
+		<Navigator>
+			<HomeScreen />
+		</Navigator>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
